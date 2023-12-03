@@ -1,0 +1,327 @@
+*{
+    padding: 0px;
+    margin: 10px;
+    font-family: 'poppins',sans-serif;
+    box-sizing:content-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+}
+
+#header{
+    background-image:url(./images/background.png);/* doubt*/
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+nav{
+    display:flex;
+    align-items: center;
+    justify-content:space-between;       /* doubt */
+    flex-wrap: wrap;
+}
+.logo{
+    width: 140px;
+}
+nav ul li {
+    display: inline-flex;
+    list-style: none;
+    margin: 10px 10px;/* doubt */
+}
+nav ul li a{
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+
+}
+nav ul li a::after{       /* doubt */
+    content: '';
+    width: 0;
+    width: 0px;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;        
+    left: 0;    
+    bottom: -6px;
+    transition: 0.3s;
+}
+nav ul li a:hover::after{
+    width:100%;
+}
+.header-text{
+    margin-top: 20%;
+    font-size:30px;
+
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+
+}
+.header-text h1 span.Gireendra{
+    color:#ff004f
+ }
+ .orange-color{
+    color: orange;
+ }
+ .white-color{
+    color:white;
+ }
+.green-color{
+    color:green;
+} 
+.G{
+    color: #ff004f;
+}
+
+.logo1{
+    font-size: 45px;
+}
+/*.logo1:hover{
+    color: #ff004f;
+    transform: translateX(5px);
+
+    
+
+}*/
+
+/*      about us styling*/
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-me{
+    font-size: 40px;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 20px; 
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+.about{
+    position: relative;
+}
+.about::after{       /* doubt */
+    content: '';
+    width: 0;
+    width: 0;
+    height: 1px;
+    background: #ff004f;
+    position: absolute;        
+    left: 0;            
+    bottom: -6px;
+    transition: 0.5s;
+}
+.about::after{ 
+    width: 50%;
+}
+p{
+    color: #ffffff;
+    opacity: 85%;
+}
+.tab-titles{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px 0px 50px 0px;
+    color: #ffffff;
+    opacity: 95%;
+}
+.tab-links{
+    margin: 30px 0px 0px 50px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 00%;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left:0;
+    bottom:-8px;
+    transition: 0.5s;
+
+}
+.tab-links.active-links::after{
+    width: 50%;
+
+}
+.tab-contents ul li{
+
+    list-style:none;
+    
+    margin: 10px 0px;
+}
+
+.tab-contents ul li::before {
+        content: "+ ";
+      }
+
+.tab-contents ul li span{
+    color: #ff004f;
+}
+.tab-contents{
+    display:none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+
+/* contact me*/
+
+.contact-left p{ 
+    margin-top: 30px;
+
+}
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis:60%;/*doubt*/
+}
+ .social-icons{
+    color: #ff004f;
+ }
+.social-icons a{
+    text-decoration: none;
+    font-size: 25px;
+    margin-right: 0px;
+    color:#ffffff;
+    display: inline-block;
+    transition: 0.5s;
+}
+.social-icons a:hover{
+    color: #ff004f;
+    transform:translatey(3px);
+
+}
+.btn.btn2{
+    display: inline-block;
+    padding: 8px;
+    font-size: 12px;
+    text-decoration: none;
+    background-color: #ff004f;
+    color: aliceblue;
+    border-radius: 6px;
+    cursor: pointer;
+
+}
+.contact-right form{
+    display: grid;
+}
+form input, form textarea{
+    background:#1d1c1ca8;
+    color:#ffffff;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 7px;
+    border: 0;
+
+}
+.fa-regular.fa-circle-xmark {
+    display: none;
+  }
+.fa-solid.fa-bars{
+    display: none;
+}
+#msg{
+    color: #cac5c5a8;
+    margin-left: 30px;
+}
+
+@media only screen and (max-width:500px){
+    .logo1{
+        font-size: 30px;
+        margin: 0px;
+    }
+    
+    #header{
+        background-image: url(./images/phone-background.png);
+    *{
+        margin: -10px;
+        padding: 0;
+
+    }
+    }
+    .header-text{
+        margin-top: 150%;
+        font-size:25px;
+    }
+    .header-text h1{
+        font-size: 30px;
+
+    }
+    nav.fas{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top:0;
+        right: -200px;
+        width: 150px;
+        height: 100vh;
+        padding-top: 50px;
+        transition: 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin:25px;
+    } 
+    nav ul .fa-regular.fa-circle-xmark{
+        display: inline-block;
+        position: absolute;
+        top: 15px;
+        left: 25px;
+        cursor: pointer;
+        font-size: 22px;
+    }
+    .fa-solid.fa-bars{
+        display: inline-block;
+        font-size: 24px;
+    }
+    .about-me{
+        font-size: 30px;
+    }
+    .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        flex-basis: 80%;
+    }
+    .tab-links{
+        font-size: 14px;
+    }
+    .contact-left,.contact-right{
+        flex-basis: 100%;
+        margin: 0%;
+    }
+}
+ 
+
+
+
+
+
+
+
+
+
