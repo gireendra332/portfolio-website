@@ -29,6 +29,7 @@ nav{
 }
 .logo{
     width: 140px;
+    
 }
 nav ul li {
     display: inline-flex;
@@ -314,6 +315,10 @@ form input, form textarea{
         flex-basis: 100%;
         margin: 0%;
     }
+    .about-col-2{
+        flex-basis: 100%;
+    }
+    
 }
  
 
